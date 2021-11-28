@@ -1,19 +1,20 @@
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { useState } from "react";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
-  const [search, setSearch] = useState("");
 
   return (
-    <Router>
-      <main className="App">
-        <Route path="/" exact>
-          cvb
-        </Route>
-        
-      </main>
-    </Router>
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
